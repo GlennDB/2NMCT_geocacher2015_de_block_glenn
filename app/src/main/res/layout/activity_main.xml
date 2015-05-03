@@ -1,0 +1,314 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="14dp" tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_tv_location"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Longitude:"
+        android:id="@+id/textViewLongitude"
+        android:layout_below="@+id/tv_location"
+        android:layout_alignLeft="@+id/tv_location"
+        android:layout_alignStart="@+id/tv_location"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tv_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOT FOUND YET"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/textViewLongitude"
+        android:layout_toRightOf="@+id/textViewLongitude"
+        android:layout_toEndOf="@+id/textViewLongitude"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Latitude:"
+        android:id="@+id/textViewLatitude"
+        android:layout_below="@+id/textViewLongitude"
+        android:layout_alignLeft="@+id/textViewLongitude"
+        android:layout_alignStart="@+id/textViewLongitude"
+        android:layout_marginTop="2.5dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tv_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOT FOUND YET"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/textViewLatitude"
+        android:layout_toRightOf="@+id/textViewLatitude"
+        android:layout_toEndOf="@+id/textViewLatitude"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Address:"
+        android:id="@+id/textViewAddress"
+        android:layout_below="@+id/textViewAltitude"
+        android:layout_alignLeft="@+id/textViewAltitude"
+        android:layout_alignStart="@+id/textViewAltitude"
+        android:layout_marginTop="2.5dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STREET + NUMBER"
+        android:id="@+id/textViewStreetNumber"
+        android:textSize="15dp"
+        android:layout_below="@+id/textViewAddress"
+        android:layout_alignLeft="@+id/textViewAltitude"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZIPCODE + CITY"
+        android:id="@+id/textViewZipcodeCity"
+        android:textSize="15dp"
+        android:layout_below="@+id/textViewStreetNumber"
+        android:layout_alignLeft="@+id/textViewAltitude" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COUNTRY"
+        android:id="@+id/textViewCountry"
+        android:textSize="15dp"
+        android:layout_below="@+id/textViewZipcodeCity"
+        android:layout_alignLeft="@+id/textViewAltitude" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Altitude:"
+        android:id="@+id/textViewAltitude"
+        android:layout_below="@+id/textViewLatitude"
+        android:layout_alignLeft="@+id/textViewLatitude"
+        android:layout_alignStart="@+id/textViewLatitude"
+        android:layout_marginTop="2.5dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOT FOUND YET"
+        android:id="@+id/tv_altitude"
+        android:textSize="15dp"
+        android:layout_above="@+id/textViewAddress"
+        android:layout_toRightOf="@+id/textViewLatitude"
+        android:layout_toEndOf="@+id/textViewLatitude"
+        android:layout_marginLeft="5dp" />
+
+    <ImageView
+        android:layout_width="475dp"
+        android:layout_height="275dp"
+        android:id="@+id/imageViewMap"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewAltitudeT" />
+
+    <TextView
+        android:id="@+id/tv_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target Location"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewCountry"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Longitude:"
+        android:id="@+id/textViewLongitudeT"
+        android:layout_below="@+id/tv_target"
+        android:layout_alignLeft="@+id/tv_target"
+        android:layout_alignStart="@+id/tv_target"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Latitude:"
+        android:id="@+id/textViewLatitudeT"
+        android:layout_below="@+id/textViewLongitudeT"
+        android:layout_alignLeft="@+id/textViewLongitudeT"
+        android:layout_alignStart="@+id/textViewLongitudeT"
+        android:layout_marginTop="2.5dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Altitude:"
+        android:id="@+id/textViewAltitudeT"
+        android:layout_below="@+id/textViewLatitudeT"
+        android:layout_alignLeft="@+id/textViewLatitudeT"
+        android:layout_alignStart="@+id/textViewLatitudeT"
+        android:layout_marginTop="2.5dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="kilometers away from you."
+        android:id="@+id/textViewMetersAway"
+        android:layout_alignTop="@+id/textViewAltitudeT"
+        android:layout_alignRight="@+id/imageViewMap"
+        android:layout_alignEnd="@+id/imageViewMap"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:id="@+id/textViewKilometers"
+        android:textSize="15dp"
+        android:layout_above="@+id/imageViewMap"
+        android:layout_toLeftOf="@+id/textViewMetersAway"
+        android:layout_toStartOf="@+id/textViewMetersAway"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/tv_longitudeT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/textViewLongitudeT"
+        android:layout_toRightOf="@+id/textViewLongitudeT"
+        android:layout_toEndOf="@+id/textViewLongitudeT"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/tv_latitudeT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="15dp"
+        android:layout_alignBottom="@+id/textViewLatitudeT"
+        android:layout_toRightOf="@+id/textViewAddress"
+        android:layout_toEndOf="@+id/textViewAddress"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/tv_altitudeT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="15dp"
+        android:layout_alignBottom="@+id/textViewAltitudeT"
+        android:layout_toRightOf="@+id/textViewAltitudeT"
+        android:layout_toEndOf="@+id/textViewAltitudeT"
+        android:layout_marginLeft="5dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewGreen"
+        android:src="@drawable/green"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_location"
+        android:layout_toEndOf="@+id/tv_location"
+        android:layout_marginLeft="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewRed"
+        android:src="@drawable/red"
+        android:layout_alignBottom="@+id/tv_target"
+        android:layout_toRightOf="@+id/tv_target"
+        android:layout_toEndOf="@+id/tv_target"
+        android:layout_marginLeft="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewArrow"
+        android:src="@drawable/redarrow"
+        android:maxWidth="1dp"
+        android:maxHeight="1dp"
+        android:layout_below="@+id/imageViewGreen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/imageViewMap"
+        android:layout_alignEnd="@+id/imageViewMap"
+        android:layout_marginLeft="260dp"
+        android:layout_alignBottom="@+id/textViewAddress"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Target"
+        android:id="@+id/textViewDegrees"
+        android:layout_alignTop="@+id/tv_location"
+        android:layout_alignRight="@+id/textViewMetersAway"
+        android:layout_alignEnd="@+id/textViewMetersAway" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You"
+        android:id="@+id/textViewDirection"
+        android:layout_below="@+id/imageViewArrow"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewArrow2"
+        android:src="@drawable/greenarrow"
+        android:layout_below="@+id/textViewDirection"
+        android:layout_above="@+id/tv_longitudeT"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/imageViewMap"
+        android:layout_alignEnd="@+id/imageViewMap"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+</RelativeLayout>
